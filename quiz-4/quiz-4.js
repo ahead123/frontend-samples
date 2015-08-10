@@ -12,13 +12,8 @@ Write some test code that outputs the results (true or false) of the following s
 
 var pangramCheck = function(sentence){
 
-	var alphabet = "";
+	var alphabet = "abcdefghijklmnopqrstuvwxyz";
 	var newSentence = []
-
-	// create alphabet a-z using unicode char conversion.
-	for(var i = 65; i <= 90; i++){
- 		alphabet += (String.fromCharCode(i).toLowerCase())
-	}
 
 	// push our input sentence into an array and remove spaces.
 	var removeSpaces = function(sentence){
@@ -41,8 +36,13 @@ var pangramCheck = function(sentence){
     return index == array.indexOf(everyElement);
 	}).join('');
   
+  // ignore symbols and numbers and return an array of only letters
+  var re = /[a-zA-Z]+/g;
+  var onlyLetters = removeDups.match(re);
+  
+  
   // return true if string contains a-z else return false.
-  return removeDups == alphabet ? true : false;
+  return onlyLetters == alphabet ? true : false;
 
 }
 
@@ -52,9 +52,9 @@ console.log(pangramCheck("A wizard's job is to vex chumps quickly in fog"));
 console.log(pangramCheck("Watch 'Jeopardy!', Alex Trebek's fun TV quiz game"));
 console.log(pangramCheck("This is not a pangram"));
 
-// console.log(pangramCheck("abcdefghijklmnopqrstuvwxyz") == true); 
-// console.log(pangramCheck("aaaabcdefghijklmnopqrstuvwxyzoh yeah watermelon") == true);
-// console.log(pangramCheck("abc") == false);
+console.log(pangramCheck("abcdefghijklmnopqrstuvwxyz") == true); 
+console.log(pangramCheck("aaaabcdefghijklmnopqrstuvwxyzoh yeah watermelon") == true);
+console.log(pangramCheck("abc") == false);
 
 
 

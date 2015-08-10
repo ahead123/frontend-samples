@@ -1,41 +1,67 @@
 
-body {font-family: sans-serif}
-#wrapper {
-    width:550px;
-    margin: 0 auto
+body {
+	font-family: sans-serif;
+	background-color: #fafafa;
+	margin: 0;
+	padding: 0;
 }
 
-h1 { color : #6699FF; margin  :50px 0;
+.wrapper {
+    width:	550px;
+    margin: 0 auto;
+}
+
+header {
+	background-color: #fff;
+	border-bottom: 1px solid #edeeee;
+	float: left;
+	width: 100%;
+	box-shadow: 2px 2px 2px #ccc;
+	margin-bottom: 30px;
+}
+
+h1 { 
+	color: #6699FF; 
+	margin: 50px 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
 }
 
 form {
-    margin-bottom:40px}
+    margin-bottom: 40px;
+    float: left;
+}
 
 form input[type=text] {
     display: inline-block;
-padding:0 5px;
-height:30px;
-line-height: 30px;
-font-size : 14pt;
-width:500px;
+	padding: 0 5px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14pt;
+	width: 500px;
 }
 
-form input[type=submit] { height: 30px;
-    display:inline-block;
-
-
-
-
-        border: none;
+form input[type=submit] { 
+	height: 30px;
+    display: inline-block;
+    border: none;
     color: white;
+    margin-top: 15px;
+    width: 50px;
+    background: #6699FF;
 }
 
-#results .result {
-background: #EEE;
-padding:10px;
-margin-bottom: 20px;
+
+#results, .result {
+	background: #EEE;
+	margin-bottom: 20px;
+	width: 100%;
+	float: left;
 }
 
-#results .result p.input
-{  font-weight: bold
+#results, .result, p.input{  
+	font-weight: bold;
 }
+
+
+
